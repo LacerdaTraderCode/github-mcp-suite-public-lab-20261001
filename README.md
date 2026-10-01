@@ -1,2 +1,3 @@
-# github-mcp-suite-public-lab-20261001
-Temporary public laboratory for GitHub MCP Server Suite API tests
+# Public GitHub MCP laboratory
+
+Temporary public repository. It contains no credentials or sensitive data and is used only for integration tests.
