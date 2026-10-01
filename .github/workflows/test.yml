@@ -1,0 +1,25 @@
+name: Public MCP laboratory
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python lab.py
+      - name: Create artifact
+        run: mkdir -p output; python lab.py > output/result.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: public-mcp-lab-result
+          path: output/result.txt
