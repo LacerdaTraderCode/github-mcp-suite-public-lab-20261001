@@ -1,0 +1,1 @@
+Arquivo de teste da suite. Pode ser apagado.
